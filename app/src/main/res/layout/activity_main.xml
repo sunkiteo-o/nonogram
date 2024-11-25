@@ -5,34 +5,39 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- ToggleButton 추가 -->
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textOff="Mark X"
-        android:textOn="Find Black" />
-
-    <!-- TableLayout -->
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toggleButton"
-        android:layout_marginTop="16dp"
-        android:stretchColumns="*" />
-
+    <!-- 생명 표시 TextView -->
     <TextView
         android:id="@+id/lifeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Life: 3"
-        android:textSize="18sp"
-        android:layout_margin="16dp"
-        android:gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="start"
+        android:text="Life: 3"
+        android:textSize="18sp" />
 
+    <!-- TableLayout (노노그램 판) -->
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lifeTextView"
+        android:layout_marginTop="16dp"
+        android:stretchColumns="*" />
+
+    <!-- ToggleButton (토글 버튼) -->
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tableLayout"
+        android:layout_marginTop="16dp"
+        android:textOff="Mark X"
+        android:textOn="Find Black"
+        android:layout_alignParentStart="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+        />
 </RelativeLayout>

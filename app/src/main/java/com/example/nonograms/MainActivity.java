@@ -39,9 +39,6 @@ public class MainActivity extends AppCompatActivity {
             TableRow tableRow = new TableRow(this);
             tableLayout.addView(tableRow);
 
-
-            Log.e("first for", "Here!");
-
             for (int j = 0; j < 8; j++) {
                 if (j < 3) {
                     // 행의 텍스트뷰 추가
@@ -114,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // 행, 열 힌트 계산
-           countBInRowAndColumn(buttons, rowTextViews, colTextViews);
+        countBInRowAndColumn(buttons, rowTextViews, colTextViews);
     }
 
     private void updateHintsForRow(StringBuilder hint, TextView[] rowHintViews) {
